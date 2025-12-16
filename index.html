@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Marsha 🤍</title>
+<style>
+*{box-sizing:border-box}
+:root{
+  --pink:#f7c6dc;
+  --pink-strong:#ff6fae;
+  --offwhite:#fff7fb;
+  --shadow:0 10px 28px rgba(0,0,0,.12);
+}
+body{margin:0;font-family:'Segoe UI',sans-serif;background:linear-gradient(180deg,#fde7f0,#fff7fb)}
+section{display:none;min-height:100vh;padding:24px}
+section.active{display:flex}
+.center{align-items:center;justify-content:center;flex-direction:column;text-align:center}
+.card{
+  background:rgba(255,255,255,.96);
+  padding:26px;border-radius:24px;max-width:420px;width:100%;
+  box-shadow:var(--shadow);
+  animation:fadeUp .8s cubic-bezier(.22,.61,.36,1);
+}
+h1{color:#ff4f9a;letter-spacing:.2px}
+p{line-height:1.65}
+button{
+  padding:12px 20px;border:none;border-radius:22px;
+  background:linear-gradient(135deg,#ff7fb8,#ff5fa2);
+  color:#fff;font-size:15px;margin-top:14px;
+  transition:transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+}
+button:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(255,95,162,.35)}
+input{padding:12px;width:100%;border-radius:12px;border:1px solid #ffb6d5;background:var(--offwhite)}
+.menu-btn{position:fixed;top:14px;right:14px;width:42px;height:42px;border-radius:50%;
+  background:#ff6fae;color:#fff;border:none;font-size:22px;z-index:10}
+.menu{position:fixed;top:64px;right:14px;background:#fff;border-radius:16px;
+  box-shadow:0 14px 34px rgba(0,0,0,.18);display:none;z-index:10;overflow:hidden}
+.menu button{display:block;width:100%;background:none;color:#444;text-align:left;padding:12px 16px}
+.menu button:hover{background:#fde7f0}
+.gallery{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory}
+.gallery img{
+  flex:0 0 100%;max-height:60vh;object-fit:contain;border-radius:18px;
+  background:#f5f5f5;scroll-snap-align:center
+}
+.matcha{background:linear-gradient(180deg,#e6f2e6,#f4fbf4)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.heart{position:fixed;bottom:-20px;font-size:22px;animation:float 6s linear infinite;color:#ff5fa2;pointer-events:none}
+@keyframes float{from{transform:translateY(0);opacity:1}to{transform:translateY(-120vh);opacity:0}}
+</style>
+</head>
+<body>
+
+<button class="menu-btn" onclick="toggleMenu()">⋮</button>
+<div class="menu" id="menu">
+  <button onclick="go('open')">Opening</button>
+  <button onclick="go('surat')">Surat</button>
+  <button onclick="go('moment')">Moment</button>
+  <button onclick="go('marsha')">Foto Marsha</button>
+  <button onclick="go('matcha')">Matcha</button>
+  <button onclick="go('time')">Waktu</button>
+  <button onclick="go('love')">Penutup</button>
+</div>
+
+<section id="open" class="active center">
+  <div class="card">
+    <h1>Hai Marsha…</h1>
+    <button onclick="go('login')">Mulai 💗</button>
+  </div>
+</section>
+
+<section id="login" class="center">
+  <div class="card">
+    <h1>🔒 buat kamu sayangg</h1>
+    <input id="pw" type="password" placeholder="password">
+    <button onclick="check()">Masuk</button>
+  </div>
+</section>
+
+<section id="surat" class="center">
+  <div class="card">
+    <p>
+      haii marsha aku sayang kamuu semoga kamu sehat sehat ya,<br>
+      makasi udah mau sejauh ini sama aku hehe,<br>
+      i love youu,<br><br>
+      kamu kalo ada apa apa cerita ya ke aku,<br>
+      aku mau deh jadi rumah kamu hehe,<br>
+      aku sayang kamu bukan cuma karna muka atau penampilan tapi semuanya aku suka darimu hehe<br>
+      kamu kalo bt lucu deh,<br>
+      semoga kamu bisa cinta aku lebih dari 50% ya ijinnn 🫸🏻
+    </p>
+  </div>
+</section>
+
+<section id="moment" class="center">
+  <div class="card">
+    <h1>Moment</h1>
+    <div class="gallery">
+      <img src="1000149957.png">
+      <img src="1000149956.png">
+      <img src="1000149949.png">
+      <img src="1000173265.png">
+      <img src="Screenshot_20251129_203014_com.roblox.client.jpg">
+      <img src="Screenshot_20251111_192933_com.mobile.legends.jpg">
+      <img src="Screenshot_20251019_123049_com.mobile.legends.jpg">
+      <img src="Screenshot_20251101_120531_com.roblox.client.jpg">
+      <img src="Screenshot_20250909_193706_com.mobile.legends.jpg">
+      <img src="Screenshot_20251105_223416_com.roblox.client.jpg">
+    </div>
+    <p>aku suka momen ini</p>
+  </div>
+</section>
+
+<section id="marsha" class="center">
+  <div class="card">
+    <h1>Marsha 🤍</h1>
+    <div class="gallery">
+      <img src="1000181442.jpg">
+      <img src="1000181441.jpg">
+      <img src="1000185077.jpg">
+      <img src="1000181815.jpg">
+      <img src="1000185078.jpg">
+    </div>
+    <p>cantik yaa kamu i love you</p>
+  </div>
+</section>
+
+<section id="matcha" class="center matcha">
+  <div class="card">
+    <h1>Matcha 🍵</h1>
+    <div class="gallery">
+      <img src="1000188544.jpg">
+      <img src="1000188545.jpg">
+      <img src="1000188543.jpg">
+      <img src="1000188541.jpg">
+    </div>
+    <p>hehe aku tambahin ini soalnya matcha kesukaan kamu banget sering kangen matcha kamu hehe</p>
+  </div>
+</section>
+
+<section id="time" class="center">
+  <div class="card">
+    <h1 id="days"></h1>
+  </div>
+</section>
+
+<section id="love" class="center">
+  <div class="card">
+    <button onclick="burst()">I love you 💖</button>
+    <p style="margin-top:12px">for you only</p>
+  </div>
+</section>
+
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_5e4b4f4a54.mp3">
+</audio>
+
+<script>
+function toggleMenu(){menu.style.display=menu.style.display==='block'?'none':'block'}
+function go(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  menu.style.display='none';
+  if(!musicStarted){music.play(); musicStarted=true;}
+}
+let musicStarted=false;
+function check(){ if(pw.value==='ssaaqt'){go('surat')} else alert('password salah') }
+function burst(){
+  for(let i=0;i<14;i++){
+    let h=document.createElement('div');
+    h.className='heart';h.innerHTML='💖';
+    h.style.left=Math.random()*100+'vw';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6000);
+  }
+}
+let s=new Date('2025-05-08'),n=new Date();
+document.getElementById('days').innerText='Aku sayang kamu sejak '+Math.floor((n-s)/86400000)+' hari';
+</script>
+</body>
+</html>
